@@ -27,3 +27,9 @@ repositories {
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
 }
+
+tag {
+    // Now you can specify the message via -P tagMessage="..."
+    // e.g. ./gradlew tag --push -P tagMessage="..."
+    message fromProjectProperty('tagMessage')
+}
